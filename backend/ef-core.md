@@ -10,3 +10,5 @@
 
 # SQL: SELECT TOP 1 * FROM DataSets WHERE ID = 5; (Single row)
 # C#: var item = await _context.DataSets.FirstOrDefaultAsync(x => x.ID ==5);
+
+# 2. INSERT
