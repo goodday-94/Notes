@@ -50,9 +50,19 @@ await _context.SaveChangeAsync();
 //SQL:
 SELECT COUNT(*) FROM DataSets WHERE DataSetId = 5;
 //C#:
-var count = await _Content.Datasets.AnyAsync(x => x.DataSetId == 5);
+var count = await _Content.Datasets.CountAsync(x => x.DataSetId == 5);
 
+# 6.EXISTS
+//SQL:
+SELECT 1 FROM DataSets WHERE DataSetId =5;
+//C#:
+var exists = await _Content.DataSets.AnyAsync (x => x. DataSetId ==5);
 
+# 7. SELECT specific fields
+//SQL:
+SELECT Name FROM DataSets;
+//C#:
+var names = await _Content.DataSets.Select(x => x.Name).ToListAsync();
 
 
 
