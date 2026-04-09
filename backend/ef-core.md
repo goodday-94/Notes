@@ -22,3 +22,21 @@ var item = await _context.DataSets.FirstOrDefaultAsync(x => x.ID ==5);
 // SQL:
 INSERT INTO DataSets (Name) VALUES ('Test');
 // C#
+var dataSet = new dataSet
+{
+  Name = "Test"
+};
+_content.DataSets.Add(dataSet);
+await _content.SaveChangeAsync();
+
+# 3. UPDATE
+// SQL:
+UPDATE DataSets SET Name = 'NewName' WHERE Id = 5;
+// C#
+var data = _content.DataSets.FindAsync(5);
+data.Name = 'NewName';
+
+await _content.SaveChangeAsync();
+
+
+
