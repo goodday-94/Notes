@@ -38,5 +38,25 @@ data.Name = 'NewName';
 
 await _content.SaveChangeAsync();
 
+# 4.DELETE
+// SQL:
+DELETE FROM DataSets WHERE Id =5;
+// C#: 
+var data = await _Context.Datasets.FindAsync(5);
+_content.DataSets.Remove(data);
+await _context.SaveChangeAsync();
+
+# 5.COUNT
+//SQL:
+SELECT COUNT(*) FROM DataSets WHERE DataSetId = 5;
+//C#:
+var count = await _Content.Datasets.AnyAsync(x => x.DataSetId == 5);
+
+
+
+
+
+
+
 
 
