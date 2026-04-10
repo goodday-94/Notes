@@ -64,8 +64,30 @@ SELECT Name FROM DataSets;
 //C#:
 var names = await _Content.DataSets.Select(x => x.Name).ToListAsync();
 
+# 8. ORDER BY
+// SQL:
+SELECT * FROM DataSets ORDER BY CreateAt DESC;
+// C#:
+var order = await _Content.DataSets.OrderByDescending (x => x.CreateAt).ToListAsync();
 
+# 9 JOIN (relationship)
+// SQL:
+SELECT * 
+FROM DataSetImages dsi
+JOIN DataSets ds ON dsi.DataSet_Id = ds.Id;
+// C#:
+var data = await _context.DataSetImages
+    .Include(x => x.DataSet)
+    .ToListAsync();
 
+# 10 WHERE + AND
+// SQL:
+SELECT * FROM DataSetImages 
+WHERE DataSet_Id = 5 AND DeletedAt IS NULL;
+// C#:
+var list = await _context.DataSetImages
+    .Where(x => x.DataSet_Id == 5 && x.DeletedAt == null)
+    .ToListAsync();
 
 
 
