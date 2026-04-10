@@ -7,13 +7,16 @@
 
 # Examples:
 # 1. Model (database/entity)
+
 public class DataSet
 {
     public long Id { get; set; }
     public string Name { get; set; }
     public DateTime CreatedAt { get; set; }
 }
+
 # 2. DTO (API transfer)
+
 public class DataSetDto
 {
     public long Id { get; set; }
