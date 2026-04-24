@@ -23,8 +23,8 @@ Learning / unsure → Ask permissions (see every change)
 
 | Model | Shortcut | Best for |
 |---|---|---|
-| **Opus 4.7** | `1` | Hard bugs, complex architecture, security review |
-| **Opus 4.7 1M** | `2` | Entire codebase in context, 50+ files at once |
+| **Opus 4.7** | `1` | Hard bugs, complex architecture, security review, with 200k tokens memory |
+| **Opus 4.7 1M** | `2` | Entire codebase in context, 50+ files at once, , with 1M tokens memory |
 | **Sonnet 4.6** | `3` | Daily coding — good balance of speed and quality ✅ |
 | **Haiku 4.5** | `4` | Quick questions, simple edits, fast responses |
 
