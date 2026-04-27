@@ -1,11 +1,13 @@
-# NUnit-style
+# NUnit
 
-# 1. The common naming format: 
-# MethodName_ShouldExpectedBehavior_WhenCondition
-
-# exp:
-# deleteDataSet_ ShouldReturnSuccess_WhenUserIsAdmin 
-
+## 1. The common naming format: 
+```csharp
+MethodName_ShouldExpectedBehavior_WhenCondition
+```
+exp:
+```c#
+deleteDataSet_ ShouldReturnSuccess_WhenUserIsAdmin 
+```
 # 2. Clean template
 [Test]
 public async Task TestName(){
