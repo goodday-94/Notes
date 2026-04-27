@@ -1,11 +1,11 @@
 # NUnit
 
 ## 1. The common naming format: 
-```csharp
+```C#
 MethodName_ShouldExpectedBehavior_WhenCondition
 ```
 exp:
-```c#
+```C#
 deleteDataSet_ ShouldReturnSuccess_WhenUserIsAdmin 
 ```
 # 2. Clean template
